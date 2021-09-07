@@ -37,7 +37,7 @@ c3 = '1'
 s :: String
 s = "Hello World!"
 
--- Pair, can be understood as a tuple holding mu;=ltiple variables
+-- Pair, can be understood as a tuple holding multiple variables
 p :: (Int, Char, Bool)
 p = (32, 'r', True)
 
