@@ -47,6 +47,10 @@ l2 :: [Char] -- a list of character is basically a string
 l1 = [1, 2, 3, 4, 5]
 l2 = ['a', 'b', 'c', 'd', 'e']
 
+-- The second way to decalre the variable inside "main" function using the "let" keyword. Once the
+-- variable is declared, it can be assigned to another value. Examples are inside the main function.
+
+
 -- "main" function, which executes the program
 main = do
  
@@ -66,4 +70,14 @@ main = do
   print p
   print l1
   print l2
+
+  let k = 3 -- declare the variable k to be 3
+  print "Initial value of k is:"
+  print k 
+  let k = 4 -- assign a new value 4 to the variable k
+  print "Value of k after re-assigning the value is:" 
+  print k 
+  -- we don't need to specify the type to declare the variable inside "main" function
+  let j = [1, 2, 3, 4, 5]
+  print j
 
