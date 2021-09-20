@@ -1,0 +1,3 @@
+Hello World!
+Computer Scienc is awesome!
+I enjoy learning Haskell!
