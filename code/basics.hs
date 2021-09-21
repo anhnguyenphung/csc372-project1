@@ -15,7 +15,7 @@ main = do
   print $ not (False || True) -- not (True or False)
   -- == (equal), /= (not equal), > (greater than), < (less than), >= (greater than or equal), <= (less than or equal)
   print $ 'b' == 'b' -- True
-  print $ 12 /= 3 -- Truee
+  print $ 12 /= 3 -- True
   print $ (6 > 7) && ("a" > "c") -- False
   print $ "iOS" >= "Android" -- True
 
