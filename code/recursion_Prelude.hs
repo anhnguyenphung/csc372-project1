@@ -29,7 +29,7 @@ initial = [1,2,3,4,5,6]
 data Maybe a = Nothing | Just a           -- Defining the type Maybe
 
 main = do
-  putStrLn "The maximum of the list is[3,2,100,1000,0,-1] : "
+  putStrLn "The maximum of the list is [3,2,100,1000,0,-1]: "
   print(Prelude.maximum [3,2,100,1000,0,-1])
 
   putStrLn("The maximum of the list [1,2,3,4,5,6]: ")
