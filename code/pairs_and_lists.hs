@@ -10,16 +10,17 @@ addPair (x,y) = x + y
 
 -- Lists are one of the most basic data type in haskell
 number :: [Integer]                     -- declaration of Lists
+number = [1,2,3,4,5]
 
 -- Haskell also has list comprehension as python.
 -- String could also be considered as a lists of characters so that
 -- string is just an abbreviation for [Char].
 -- For example:
 list_1 :: [Char]
-list_1 :: ['w', 'o', 'l', 'r', 'd']
+list_1 = ['w', 'o', 'l', 'r', 'd']
 
 list_2 :: String
-list_2 :: "world"
+list_2 = "world"
 -- We have that list_1 == list_2 and they are the same.
 
 -- Most of the lists are constructed from the empty list using the cons operator,
@@ -31,7 +32,7 @@ emptyList = []
 -- To create a list with some elements already, we have:
 expList = [1,2,3,4]
 -- Another way to create expList is:
-expList = 1 : 2 : 3 : 4 : []
+expList1 = 1 : 2 : 3 : 4 : []
 -- All the lists are singly linked lists, not array
 
 -- Functions on lists: functions can be used on lists pattern matching
@@ -40,3 +41,7 @@ expList = 1 : 2 : 3 : 4 : []
 sum_a :: [Int] -> Int
 sum_a [] = 0
 sum_a (x:xs) = x + sum_a xs
+
+main = do
+  putStrLn("This is an example of pair between 1 and 2: ")
+  print(addPair(1,2))
