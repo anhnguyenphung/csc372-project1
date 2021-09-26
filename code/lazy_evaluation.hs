@@ -39,5 +39,5 @@ f2 (Person x) = [Person x]
 -- because the result of f2 depends on the shape of y.
 
 main = do
-  putStrLn("This is the result of functions Num a: ")
+  putStrLn("This is the result of functions f x y = x + 2 with x = 2 and y = 3")
   print $ f 2 3 -- print out the result of the first example
