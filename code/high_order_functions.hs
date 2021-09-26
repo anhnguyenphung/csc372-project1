@@ -106,20 +106,20 @@ zipWith_f f (a:as) (b:bs) = f a b : zipWith_f f as bs
 -- Maps and Filters
 -- "map" takes a function and a list and applies that function to every element in the list, producing
 -- a new list:
-map :: (a -> b) -> [a] -> [b] 
-map _ [] = []
-map f (x:xs) = f x : map f xs
+map1 :: (a -> b) -> [a] -> [b] 
+map1 _ [] = []
+map1 f (x:xs) = f x : map1 f xs
 -- We can see that "map" function is written in a recursive manner.
 -- Example of "map" function is inside "main" function
 
 -- "filter" takes a predicate (a predicate is a function that tells whether something is true or not, 
 -- or a function that returns true or false) and a list and then returns the list of elements that
 -- satisfies the predicate:
-filter :: (a -> Bool) -> [a] -> [a]
-filter _ [] = []
-filter p (x:xs)
-  | p x = x : filter p xs
-  | otherwise = filter p xs
+filter1 :: (a -> Bool) -> [a] -> [a]
+filter1 _ [] = []
+filter1 p (x:xs)
+  | p x = x : filter1 p xs
+  | otherwise = filter1 p xs
 -- We can see that "filter" function is also written in a recursive manner.
 -- In the recursive case of "filter" function, if "p x" is True, then x is added to the output list, 
 -- otherwise x is not included in the output list.
