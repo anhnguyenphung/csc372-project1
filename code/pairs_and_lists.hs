@@ -10,7 +10,7 @@ addPair (x,y) = x + y
 
 -- Lists are one of the most basic data type in haskell
 number :: [Integer]                     -- declaration of Lists
-number = [1,2,3,4,5]
+number = [1, 2, 3, 4, 5]
 
 -- Haskell also has list comprehension as python.
 -- String could also be considered as a lists of characters so that
