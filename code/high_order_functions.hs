@@ -148,55 +148,66 @@ convert_2 f (a, b) = f a b
 main = do
 
   -- These 3 functions below should have the same output given the same input
+  putStrLn "The result of 3 versions of function \"less than 96\" calls on the list [1, 2, 101, 75, 300]"
   print $ lessThan96 [1, 2, 101, 75, 300]
   print $ lessThan96_2 [1, 2, 101, 75, 300]   
   print $ lessThan96_3 [1, 2, 101, 75, 300]
 
   -- Examples of lambda functions
+  putStrLn "The result of two lambda function calls (\\x y z -> x + 2*y + 3*z) 1 2 3 and (\\x y -> x > y) 5 4"
   print $ (\x y z -> x + 2*y + 3*z) 1 2 3
   print $ (\x y -> x > y) 5 4
 
   -- Examples of functions using operator section
+  putStrLn "The result of two operator section calls (>96) 300 and (<96) 300"
   print $ (>96) 300 -- output True
   print $ (<96) 300 -- output False
 
   -- These 2 functions should have the same input given the same output
+  putStrLn "The result of 2 versions of function \"checkEven\" calls on the list [1, 2, 101, 75, 300]"
   print $ checkEven [1, 2, 101, 75, 300]
   print $ checkEven_2 [1, 2, 101, 75, 300]
 
   -- These 4 functions should have the same input given the same output
+  putStrLn "The result of 4 versions of function calls on calculating the difference between 10 and 7"
   print $ f 10 7
   print $ f_1 10 7 
   print $ f_2 (10, 7)
   print $ f_3 10 7
 
   -- Example of "applyTwice_f" function
+  putStrLn "The result of multiple \"applyTwice_f\" function calls with different arguments"
   print $ applyTwice_f (+ 3) 19
   print $ applyTwice_f ("HEHE " ++) "HOHO" -- ++ is used to concatenate string
   print $ applyTwice_f (++ " HEHE") "HOHO"
   
   -- Example of "zipWtih_f" function
+  putStrLn "The result of multiple \"zipWith_f\" function calls with different arguments"
   print $ zipWith_f (-) [10, 7, 6, 24, 67] [4, 6, 7, 8, 9]
   print $ zipWith_f min [10, 7, 6, 24, 67] [4, 6, 7, 8, 9] 
   print $ zipWith_f (zipWith_f (+)) [[1, 2], [3, 4]] [[5, 6], [7, 8]]
 
-  -- Example of "map" function
-  print $ map (+5) [1, 2, 3, 4, 5]
-  print $ map (++ "HEHE") ["HAHA", "HOHO", "HUHU"]
-  print $ map (map (*2)) [[1, 2, 3], [5, 6, 7, 8, 9], [10, 4]]
+  -- Example of "map1" function
+  putStrLn "The result of multiple \"map1\" function calls with different arguments"
+  print $ map1 (+5) [1, 2, 3, 4, 5]
+  print $ map1 (++ "HEHE") ["HAHA", "HOHO", "HUHU"]
+  print $ map1 (map1 (*2)) [[1, 2, 3], [5, 6, 7, 8, 9], [10, 4]]
 
-  -- Example of "filter" function
-  print $ filter (>5) [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-  print $ filter odd [1..10] -- the input list is created using list comprehension, containing integers from 1 to 10 inclusive
+  -- Example of "filter1" function
+  putStrLn "The result of multiple \"filter1\" function calls with different arguments"
+  print $ filter1 (>5) [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  print $ filter1 odd [1..10] -- the input list is created using list comprehension, containing integers from 1 to 10 inclusive
   
 
   -- Example of the conversion
+  putStrLn "The result of an example of \"convert_2\" function call"
   print $ convert_2 (-) (7, 10) -- apply substraction on the pair
   
   
   -- You can declare a function insde "main" function using "let" by partially applying a pre-defined
   -- function outside "main" function
   let new_f = f 10
+  putStrLn "The result of new_f 7 (new f is defined as f 10)"
   print $ new_f 7 -- This should output the same result as f 10 7
   
 
