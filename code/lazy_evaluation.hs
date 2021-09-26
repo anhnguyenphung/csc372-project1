@@ -34,9 +34,10 @@ f2 (Person x) = [Person x]
 -- and the unevaluated expression is simply put in a list. Put another way, the result of f1 y does not
 -- depend on the type of t.
 
--- f2, on the other hand, needs to know something about its argument in order to proceed: was it 
+-- f2, on the other hand, needs to know something about its argument in order to proceed: was it
 -- constructed with People or Person? That is, in order to evaluate f2 y, we must first evaluate y,
 -- because the result of f2 depends on the shape of y.
 
 main = do
+  putStrLn("This is the result of functions Num a: ")
   print $ f 2 3 -- print out the result of the first example
