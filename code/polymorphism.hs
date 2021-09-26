@@ -9,3 +9,7 @@ filterList _ E = E
 filterList p (C x xs)
   | p x        = C x (filterList p xs)
   | otherwise  = filterList p xs
+
+main = do
+  putStrLn("This is the filterList after being processed: ")
+  print(filterList[1,2,3,4,5])

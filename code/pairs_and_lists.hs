@@ -2,6 +2,9 @@
 -- Example of a pair:
 p :: (Char, Char)                       -- pair declaration
 p = ('t', 'n')
+
+a :: (String, String)                       -- pair declaration
+a = ("project", "Csc")
 -- In the example above, the (x,y) notion is used both for the type of pair
 -- and a pair value.
 -- The elements of a pair can be extracted with pattern matching. For example:
@@ -30,7 +33,7 @@ list_2 = "world"
 emptyList = []
 
 -- To create a list with some elements already, we have:
-expList = [1,2,3,4]
+expList = [1,2,3,4,5]
 -- Another way to create expList is:
 expList1 = 1 : 2 : 3 : 4 : []
 -- All the lists are singly linked lists, not array
@@ -43,5 +46,11 @@ sum_a [] = 0
 sum_a (x:xs) = x + sum_a xs
 
 main = do
-  putStrLn("This is an example of pair between 1 and 2: ")
-  print(addPair(1,2))
+  putStrLn("This is an example of pair between t and n: ")
+  print(p)
+  putStrLn("This is an example of pair between project and Csc: ")
+  print(a)
+  putStrLn("This is the example of the extraction of value from pair (5,10): ")
+  print(addPair(5,10))
+  putStrLn("This is the example of list [1,2,3,4,5]: ")
+  print(expList)

@@ -29,8 +29,11 @@ initial = [1,2,3,4,5,6]
 data Maybe a = Nothing | Just a           -- Defining the type Maybe
 
 main = do
-  putStrLn "The maximum of the list is: "
+  putStrLn "The maximum of the list is[3,2,100,1000,0,-1] : "
   print(Prelude.maximum [3,2,100,1000,0,-1])
+
+  putStrLn("The maximum of the list [1,2,3,4,5,6]: ")
+  print(Prelude.maximum [1,2,3,4,5,6])
   -- Above is the code for recursion
 
   let after = map (+10) initial
@@ -38,7 +41,6 @@ main = do
   print $ after
   -- Above is the code for Map
 
+  putStrLn("The below list is the filter list of [1,2,3,4,5]: ")
   print $ (filter odd [1,2,3,4,5])
   -- Above code is example for Filter
-
-  
