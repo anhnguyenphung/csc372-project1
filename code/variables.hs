@@ -1,8 +1,8 @@
--- There are two ways to declare variables in Haskell. 
+-- There are two ways to declare variables in Haskell.
 
 -- The first way is to declare the variable outside "main" function. Once the variable is
 -- declared, it can not be changed (immutable). It can be understood that the variable
--- is declared as a constant. The value of the variable can be used later inside "main"  
+-- is declared as a constant. The value of the variable can be used later inside "main"
 
 -- Below are some basic types in Haskell.
 
@@ -10,7 +10,7 @@
 x :: Int
 x = 100
 maxInt, minInt :: Int
-maxInt = maxBound 
+maxInt = maxBound
 minInt = minBound
 
 -- Arbitrary-precision integer, limited by the amount of memory on the machine
@@ -53,31 +53,40 @@ l2 = ['a', 'b', 'c', 'd', 'e']
 
 -- "main" function, which executes the program
 main = do
- 
+
   -- print out the values declared earlier outside "main" function
+  putStrLn("This is the output when we print integer 100: ")
   print x
+  putStrLn("This is the output when we print Maximum value: ")
   print maxInt
+  putStrLn("This is the output when we print Minimum value: ")
   print minInt
+  putStrLn("This is the output when we print an integer: ")
   print y
+  putStrLn("This is the output when we print Double: ")
   print d1
   print d2
+  putStrLn("This is the output when we print Booleans: ")
   print b1
   print b2
+  putStrLn("This is the output when we print Characters: ")
   print c1
   print c2
   print c3
+  putStrLn("This is the output when we print Strings: ")
   print s
+  putStrLn("This is the output when we print pairs: ")
   print p
+  putStrLn("This is the output when we print lists: ")
   print l1
   print l2
 
   let k = 3 -- declare the variable k to be 3
   print "Initial value of k is:"
-  print k 
+  print k
   let k = 4 -- assign a new value 4 to the variable k
-  print "Value of k after re-assigning the value is:" 
-  print k 
+  print "Value of k after re-assigning the value is:"
+  print k
   -- we don't need to specify the type to declare the variable inside "main" function
   let j = [1, 2, 3, 4, 5]
   print j
-

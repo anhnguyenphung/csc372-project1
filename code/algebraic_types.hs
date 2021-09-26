@@ -54,7 +54,7 @@ data Student = Human String Int Thing
 
 -- Declare variables of type "Student" and function on type "Student"
 alex, bob :: Student
-alex = Human "Alex" 20 Shoe 
+alex = Human "Alex" 20 Shoe
 bob = Human "Bob" 21 Chair
 
 findAge :: Student -> Int
@@ -100,23 +100,26 @@ tree = Node (Leaf 'x') 1 (Node (Leaf 'y') 2 (Leaf 'z'))
 
 main = do
   -- print out the variables declared earlier outside "main" function
+  putStrLn("This is the output when we defined Shoe type as Thing: ")
   print shoe
   print list
-  
+
+  putStrLn("This is the output when we defined type as Other: ")
   print o1
   print o2
   print o
-  
+
+  putStrLn("This is the output when we defined type as Student: ")
   print alex
   print bob
 
+  putStrLn("This is the output when we defined type as Tree: ")
   print tree
-  
+
   -- call the functions specified earlier outside the "main" function
+  putStrLn("This is the output when we check if type of shoe is Electronic: ")
   print $ isElectronic shoe
+  putStrLn("This is the age of alex: ")
   print $ findAge alex
+  putStrLn("This is the output when we call intListProd: ")
   print $ intListProd (Cons 3 Empty)
-  
-
-
-
